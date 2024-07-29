@@ -251,6 +251,7 @@ def _pex_binary_impl(ctx):
             "PATH": "/bin:/usr/bin:/usr/local/bin",
             "PEX_VERBOSE": str(ctx.attr.verbosity),
             "SETUPTOOLS_USE_DISTUTILS": "stdlib",
+            "PIP_CONSTRAINT": "/tmp/pip_constraint.txt",
         },
         arguments = arguments,
     )
